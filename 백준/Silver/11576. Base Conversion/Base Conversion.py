@@ -4,16 +4,17 @@ import sys
 my_input = sys.stdin.readline
 
 A, B = map(int, my_input().split())
-m = int(my_input())
-arr = list(map(int, my_input().split()))[::-1]
+T = int(my_input())
+arr = list(map(int, my_input().split()))
 
 
 def convert_to_10(nums):
 	numbers = 0
+	idx = T - 1
+	for i in range(T):
+		numbers += nums[i] * A ** idx
 
-	for i in range(m):
-		numbers += nums[i] * (A ** i)
-
+		idx -= 1
 	return numbers
 
 def convert(n, b):
@@ -29,5 +30,5 @@ def convert(n, b):
 res = convert_to_10(arr)
 res2 = convert(res, B)
 
-print(" ".join(map(str, res2)))
+print(*res2, sep=' ')
 
