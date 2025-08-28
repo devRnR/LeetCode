@@ -13,4 +13,4 @@ def solution(N, stages):
         if reached_player == 0:
             break
     
-    return [k for k, _ in sorted(memo.items(), key=lambda x: (-x[1], x[1]))]
+    return [k for k, _ in sorted(memo.items(), key=lambda x: (-x[1], x[0]))]
