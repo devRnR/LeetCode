@@ -15,7 +15,6 @@ def solution(dirs):
         nx = x + command[dir][0]
         
         if ny <= 5 and ny >= -5 and nx <= 5 and nx >= -5:
-            print(nx, ny)
             memo.add((x,y,nx,ny))
             memo.add((nx,ny,x,y))
             x = nx
