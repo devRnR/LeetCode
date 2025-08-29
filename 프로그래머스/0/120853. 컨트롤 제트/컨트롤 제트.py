@@ -1,7 +1,6 @@
 def solution(s):
     answer = 0
-    arr = s.split(" ")
-    for i, ch in enumerate(arr):
+    for i, ch in enumerate(arr := s.split(" ")):
         if ch == 'Z':
             answer -= int(arr[i-1])
         else:
