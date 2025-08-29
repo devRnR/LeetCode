@@ -1,15 +1,13 @@
 def solution(s):
-    left = []
-    for i in s:
-        if i == ")":
-            if len(left) == 0:
+    stack = []
+    
+    for ch in s:
+        if ch == "(":
+            stack.append(ch)
+        else:
+            if not stack or stack[-1] != "(":  
                 return False
             
-            left.pop()
-        else:
-            left.append(i)
-
-    if len(left) == 0:
-        return True
-
-    return False
+            stack.pop()
+    
+    return True if not stack else False
