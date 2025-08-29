@@ -1,10 +1,11 @@
 def solution(s):
-    q = []
+    answer = 0
+    stack = []
     
-    for c in s:
-        if len(q) != 0 and q[-1] == c:
-            q.pop()
+    for ch in s:
+        if stack[-1:] == [ch]:
+            stack.pop()
         else:
-            q.append(c)
-
-    return 1 if len(q) == 0 else 0
+            stack.append(ch)
+            
+    return 0 if len(stack) else 1
