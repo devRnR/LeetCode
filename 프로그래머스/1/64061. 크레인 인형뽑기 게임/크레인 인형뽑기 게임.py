@@ -6,10 +6,11 @@ def solution(board, moves):
     
     for m in moves:
         line = new_board[m-1]
+        
         if len(line) == 0:
             continue
         
-        got =line.popleft()
+        got = line.popleft()
         
         if stack[-1:] == [got]:
             stack.pop()
