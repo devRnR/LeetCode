@@ -8,4 +8,4 @@ def solution(s):
         else:
             stack.append(ch)
             
-    return int(not len(stack))
+    return int(not stack)
