@@ -1,9 +1,7 @@
 from collections import deque
 def solution(bridge_length, weight, truck_weights):
-    answer = 0
-    
     trucks = deque(truck_weights)
-    bridge = deque([])
+    bridge = deque()
     
     time = 1
     nw = 0
