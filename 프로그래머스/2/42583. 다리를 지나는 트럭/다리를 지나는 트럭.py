@@ -1,4 +1,5 @@
 from collections import deque
+
 def solution(bridge_length, weight, truck_weights):
     trucks = deque(truck_weights)
     bridge = deque()
@@ -6,6 +7,10 @@ def solution(bridge_length, weight, truck_weights):
     time = 1
     nw = 0
     while trucks or bridge:
+        
+        if bridge:
+            time = max(time, bridge[0][1])
+        
         while bridge:
             if time - bridge_length == bridge[0][1]:
                 pt = bridge.popleft()
