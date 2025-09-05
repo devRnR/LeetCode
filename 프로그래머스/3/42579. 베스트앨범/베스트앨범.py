@@ -1,8 +1,7 @@
 def solution(genres, plays):
-    answer = []
-    
     gp = {}
     pd = {}
+    
     for g, p in zip(genres, plays):
         pd[g] = []
         gp[g] = gp.get(g, 0) + p
@@ -12,6 +11,8 @@ def solution(genres, plays):
         
     for i, v in pd.items():
         pd[i] = list(map(lambda x: x[0], sorted(v, key = lambda x: (-x[1], x[0]))))
+        
+    answer = []
     for genre in list(map(lambda x: x[0], sorted(gp.items(), key = lambda x: -x[1]))):
         answer += pd[genre][:2]
     
