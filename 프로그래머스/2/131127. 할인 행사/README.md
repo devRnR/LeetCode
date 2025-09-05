@@ -1,10 +1,10 @@
 # [level 2] 할인 행사 - 131127 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/131127?language=python3) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/131127?language=python3#) 
 
 ### 성능 요약
 
-메모리: 42 MB, 시간: 246.79 ms
+메모리: 16.5 MB, 시간: 156.09 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2025년 09월 05일 15:25:47
+2025년 09월 05일 15:30:28
 
 ### 문제 설명
 
