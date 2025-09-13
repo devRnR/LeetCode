@@ -6,7 +6,8 @@ class Solution {
         for(String[] row: clothes) {
             selected.put(row[1], selected.getOrDefault(row[1], 0) + 1);
         }
-        
+
+        System.out.println(selected);
         int sum = 1;
         for(Map.Entry<String, Integer> entry: selected.entrySet()){
             sum *= entry.getValue() + 1;
