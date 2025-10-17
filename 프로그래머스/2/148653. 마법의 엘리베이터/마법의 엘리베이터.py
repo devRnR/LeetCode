@@ -17,16 +17,3 @@ def solution(storey):
             answer += 10 - d
                 
     return answer
-
-
-'''
-555
-
-5
-
-560
-
-4
-
-5
-'''
