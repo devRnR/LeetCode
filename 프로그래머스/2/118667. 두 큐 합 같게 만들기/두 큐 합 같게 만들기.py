@@ -18,7 +18,7 @@ def solution(queue1, queue2):
     left = d1[0]
     right = d2[0]
     
-    limit = max(len(d1), len(d2)) * 3
+    limit = (len(d1) + len(d2)) * 2
     while True:
         if left_sum > right_sum:
             left_sum -= d1[0]
