@@ -1,21 +1,20 @@
 from math import ceil
 from collections import deque
 
-def solution(progoresses, speeds):
+def solution(progresses, speeds):
     
-    q = deque(zip(progoresses, speeds))
+    release = [ceil((100 - p) / s) for p, s in zip(progresses, speeds)]
     deploy = []
-
-    while q:
-        cnt = 1
-        
-        p, s = q.popleft()
-        m = ceil((100 - p ) / s)
-        
-        while q and (q[0][1] * m + q[0][0]) >= 100:
+    
+    std = release[0]
+    cnt = 1
+    for i in range(1, len(progresses)):
+        if release[i] <= std:
             cnt += 1
-            q.popleft()
+        else:
+            deploy.append(cnt)
+            cnt = 1
+            std = release[i]
 
-        deploy.append(cnt)
-
+    deploy.append(cnt)
     return deploy
