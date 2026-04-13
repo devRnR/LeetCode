@@ -1,20 +1,18 @@
 def solution(id_list, report, k):
+    ban = {}
+    id = {k: i for i, k in enumerate(id_list)}
     answer = [0 for _ in range(len(id_list))]
     
-    memo = {k: [] for k in id_list}
-    r_memo = {k: 0 for k in id_list}
-    already = set()
-    
     for r in report:
-        record = r.split()
-        if r in already: continue
-        r_memo[record[1]] += 1
-        memo[record[1]].append(record[0])
-        already.add(r)
+        f, t = r.split()
+        if t in ban:
+            ban[t].add(f)
+        else:
+            ban[t] = {f,}
+
+    for _, v in ban.items():
+        if len(v) >= k:
+            for w in v:
+                answer[id[w]] += 1
     
-    for kk, v in r_memo.items():
-        if v >= k:
-            for m in memo[kk]:
-                idx = id_list.index(m)
-                answer[idx] += 1
     return answer
