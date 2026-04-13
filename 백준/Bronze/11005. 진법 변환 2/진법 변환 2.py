@@ -1,21 +1,13 @@
 import sys
 
 input = sys.stdin.readline
-answer = 0
 
 n, k = map(int, input().split())
+digits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-def marking(n):
-	if n >= 10:
-		return str(chr(n + 55))
-	return str(n)
+res = []
+while n > 0:
+    n, r = divmod(n, k)
+    res.append(digits[r])
 
-def decimal(n, k):
-	if n < k:
-		return marking(n)
-
-	m = n // k
-	r = n % k
-	return decimal(m, k) + marking(r)
-
-print(decimal(n, k))
+print("".join(reversed(res)))
