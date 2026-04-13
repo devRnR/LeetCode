@@ -1,19 +1,19 @@
 def solution(genres, plays):
-    gp = {}
-    pd = {}
     
-    for g, p in zip(genres, plays):
-        pd[g] = []
-        gp[g] = gp.get(g, 0) + p
-        
-    for i, e in enumerate(zip(genres, plays)):
-        pd[e[0]].append([i, e[1]])
-        
-    for i, v in pd.items():
-        pd[i] = list(map(lambda x: x[0], sorted(v, key = lambda x: (-x[1], x[0]))))
-        
+    gd = {k: 0 for k in set(genres)}
+    sd = {k: [] for k in set(genres)}
     answer = []
-    for genre in list(map(lambda x: x[0], sorted(gp.items(), key = lambda x: -x[1]))):
-        answer += pd[genre][:2]
+    
+    for i,v in enumerate(zip(genres, plays)):
+        gd[v[0]] += v[1]
+        sd[v[0]].append((i, v[1]))
+    
+    g_sorted = sorted(gd.items(), key = lambda x: -x[1])
+    
+    for k, v in sd.items():
+        sd[k] = sorted(v, key = lambda x: (-x[1], x[1]))
+    
+    for k, _ in g_sorted:
+        answer += list(map(lambda x: x[0], sd[k][:2]))
     
     return answer
