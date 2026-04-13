@@ -1,23 +1,25 @@
 import sys
 
-my_input = sys.stdin.readline
-
-N = int(my_input())
+input = sys.stdin.readline
 answer = 0
 
-for _ in range(N):
-	word = list(my_input().strip())
-	d = {word[0]: True}
+for _ in range(int(input())):
+	n = input()
+	check = {}
+	cur_c = n[0]
+	flag = False
 
-	is_group_word = True
-	for i in range(1, len(word)):
-		if word[i] != word[i - 1]:
-			if word[i] in d:
-				is_group_word = False
+	for i in range(1, len(n)):
+		if n[i] == cur_c:
+			continue
+		
+		if n[i] in check:
+			flag = True
+			break
 
-		d[word[i]] = True
+		check[cur_c] = 1
+		cur_c = n[i]
 
-	if is_group_word:
-		answer += 1
+	if not flag: answer += 1
 
 print(answer)
