@@ -4,7 +4,6 @@ input = sys.stdin.readline
 
 def is_same(paper, x, y, size):
 	c = paper[x][y]
-
 	for i in range(x, x+size):
 		for j in range(y, y+size):
 			if paper[i][j] != c:
