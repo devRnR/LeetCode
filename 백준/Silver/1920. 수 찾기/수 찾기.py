@@ -1,20 +1,26 @@
 import sys
-from bisect import *
 
 input = sys.stdin.readline
-
 n = int(input())
 n_arr = sorted(map(int, input().split()))
 
 m = int(input())
 m_arr = list(map(int, input().split()))
 
-for num in m_arr:
-    v = bisect_left(n_arr, num)
+def bs_recur(arr, target, l, r):
+    if l > r:
+        return 0
 
-    if v < len(n_arr) and n_arr[v] == num:
-        print(1)
+    mid = l + (r - l) // 2
+
+    if arr[mid] == target:
+        return 1
+    elif target < arr[mid]:
+        return bs_recur(arr, target, l, mid - 1)
     else:
-        print(0)
+        return bs_recur(arr, target, mid + 1, r)
+
+for num in m_arr:
+    print(bs_recur(n_arr, num, 0, len(n_arr) - 1))
 
 
