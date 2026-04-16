@@ -13,8 +13,17 @@
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/devRnR/coding-test/tree/master/0001-two-sum) |
+| [0242-valid-anagram](https://github.com/devRnR/coding-test/tree/master/0242-valid-anagram) |
 ## Prefix Sum
 |  |
 | ------- |
 | [0238-product-of-array-except-self](https://github.com/devRnR/coding-test/tree/master/0238-product-of-array-except-self) |
+## String
+|  |
+| ------- |
+| [0242-valid-anagram](https://github.com/devRnR/coding-test/tree/master/0242-valid-anagram) |
+## Sorting
+|  |
+| ------- |
+| [0242-valid-anagram](https://github.com/devRnR/coding-test/tree/master/0242-valid-anagram) |
 <!---LeetCode Topics End-->
