@@ -10,6 +10,7 @@
 | [0001-two-sum](https://github.com/devRnR/coding-test/tree/master/0001-two-sum) |
 | [0217-contains-duplicate](https://github.com/devRnR/coding-test/tree/master/0217-contains-duplicate) |
 | [0238-product-of-array-except-self](https://github.com/devRnR/coding-test/tree/master/0238-product-of-array-except-self) |
+| [0739-daily-temperatures](https://github.com/devRnR/coding-test/tree/master/0739-daily-temperatures) |
 ## Hash Table
 |  |
 | ------- |
@@ -34,4 +35,9 @@
 |  |
 | ------- |
 | [0020-valid-parentheses](https://github.com/devRnR/coding-test/tree/master/0020-valid-parentheses) |
+| [0739-daily-temperatures](https://github.com/devRnR/coding-test/tree/master/0739-daily-temperatures) |
+## Monotonic Stack
+|  |
+| ------- |
+| [0739-daily-temperatures](https://github.com/devRnR/coding-test/tree/master/0739-daily-temperatures) |
 <!---LeetCode Topics End-->
