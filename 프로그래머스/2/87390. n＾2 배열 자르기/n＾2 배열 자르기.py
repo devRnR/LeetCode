@@ -1,9 +1,4 @@
+from math import ceil
+
 def solution(n, left, right):
-    answer = []
-    for i in range(left, right+1):
-        p = i // n + 1
-        m = i % n + 1
-        
-        answer += [max(p,m)]
-        
-    return answer
+    return [ max(ceil( i / n), (i-1) % n + 1) for i in range(left + 1, right + 2)]
