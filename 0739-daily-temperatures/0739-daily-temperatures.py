@@ -5,12 +5,9 @@ class Solution:
         answer = [0] * n
 
         for i, t in enumerate(temperatures):
-
             while stack and temperatures[stack[-1]] < t:
                 prev_t = stack.pop()
-                answer[prev_t] = i - prev_t
-            
+                answer[prev_t] = i - prev_t        
             stack.append(i)
-
         return answer
         
