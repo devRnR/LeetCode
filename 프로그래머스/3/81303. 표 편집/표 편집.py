@@ -1,44 +1,41 @@
-from collections import deque
-
 def solution(n, k, cmd):
+    prev = [i-1 for i in range(n)]
+    next = [i+1 for i in range(n)]
+    prev[0] = -1
+    next[-1] = -1
     
-    deleted = []
-    
-    up = [i - 1 for i in range(n + 2)]
-    down = [i + 1 for i in range(n + 1)]
-    
-    k += 1
+    alive = ["O"] * n
+    stack = []
+    cur = k
     
     for c in cmd:
-        if c.startswith("C"):
-            deleted.append(k)
+        if c[0] == 'U':
+            for _ in range(int(c.split(" ")[1])):
+                cur = prev[cur]
+        elif c[0] == 'D':
+            for _ in range(int(c.split(" ")[1])):
+                cur = next[cur]
+        elif c[0] == 'C':
             
-            up[down[k]] = up[k]
-            down[up[k]] = down[k]
+            alive[cur] = "X"
+            stack.append((cur, prev[cur], next[cur]))
             
-            k = up[k] if n < down[k] else down[k]
+            next[prev[cur]] = next[cur]
+            prev[next[cur]] = prev[cur]
             
-        elif c.startswith("Z"):
-            z = deleted.pop()
-            
-            down[up[z]] = z
-            up[down[z]] = z
-        else:
-            
-            a, x = c.split()
-            
-            if a == 'U':
-                x = int(x)
-                while x > 0:
-                    k = up[k]
-                    x -= 1
+            if next[cur] != -1:
+                cur = next[cur]
             else:
-                x = int(x)
-                while x > 0:
-                    k = down[k]
-                    x -= 1            
-    answer = ['O'] * n
-    for i in deleted:
-        answer[i - 1] = 'X'
+                cur = prev[cur]
+        else:
+            r, p, n = stack.pop()
+            alive[r] = "O"
+            
+            if p != -1:
+                next[p] = r
+
+            if n != -1:
+                prev[n] = r
+            
     
-    return "".join(answer)
+    return ''.join(alive)
