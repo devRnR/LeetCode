@@ -14,8 +14,8 @@ class Solution:
         q = deque([root])
         x_level = 0
         y_level = 0
-        x_parent = 0
-        y_parent = 0
+        x_parent = None
+        y_parent = None
 
         level = 0
         while q:
