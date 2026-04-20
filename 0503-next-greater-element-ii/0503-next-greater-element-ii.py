@@ -4,17 +4,17 @@ class Solution:
         stack = []
         memo = [-1 for _ in range(n)]
 
-        for i in range(n):
+        for i in range(2*n-1, -1, -1):
+            idx = i % n
 
-            target = nums[i]
-            limit = (i + 1) % n
+            while stack and stack[-1] <= nums[idx]:
+                stack.pop()
+            
+            if i < n and stack:
+                memo[i] = stack[-1]
 
-            while limit != i:
-                if nums[limit] > target:
-                    memo[i] = nums[limit]
-                    break
-                
-                limit = (limit + 1) % n
-        
+            stack.append(nums[idx])
+            
+
         return memo
 
