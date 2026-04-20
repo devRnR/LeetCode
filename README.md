@@ -1,9 +1,5 @@
-# Coding test
-
-| Beakjoon & Programmers
-
-<!---LeetCode Topics Start-->
 # LeetCode Topics
+
 ## Array
 |  |
 | ------- |
@@ -111,4 +107,3 @@
 |  |
 | ------- |
 | [0993-cousins-in-binary-tree](https://github.com/devRnR/coding-test/tree/master/0993-cousins-in-binary-tree) |
-<!---LeetCode Topics End-->
