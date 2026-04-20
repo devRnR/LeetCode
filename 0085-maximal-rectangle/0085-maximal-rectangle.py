@@ -1,41 +1,38 @@
 class Solution:
 
-    def get_max(self, arr: List[str]) -> int:
-        n = len(arr)
+    def largets_rectangle_area(self, heights:List[int]) -> int:
+        n = len(heights)
         stack = []
-        max_area = 0
+        area = 0
 
-        for i, a in enumerate(arr):
+        for i, h in enumerate(heights):
             start = i
-            v = int(a)
-            
-            while stack and stack[-1][1] > v:
-                idx, prev_v = stack.pop()
-                max_area = max(max_area, (i - idx) * prev_v)
-                start = idx
-            
-            stack.append((start, v))
-        
-        for i, v in stack:
-            max_area = max(max_area, (n - i) * v)
-        
-        return max_area
+            while stack and stack[-1][1] > h:
+                pi, ph = stack.pop()
+                area = max(area, (i - pi) * ph)
+                start = pi
+
+            stack.append((start, h))
+
+        for i, h in stack:
+            area = max(area, (n - i) * h)
+
+        return area
 
     def maximalRectangle(self, matrix: List[List[str]]) -> int:
         if not matrix or not matrix[0]:
             return 0
-        
-        row, col = len(matrix), len(matrix[0])
-        heights = [0] * col
-        max_area = 0
 
-        for r in range(row):
-            for c in range(col):
-                if matrix[r][c] == '1':
-                    heights[c] += 1
+        n, m = len(matrix), len(matrix[0])
+        heights = [0] * m
+        area =0
+
+        for row in matrix:
+            for i, v in enumerate(row):
+                if int(v):
+                    heights[i] += 1
                 else:
-                    heights[c] = 0
-            # 누적 후 heights를 바닥으로 본다.
-            max_area = max(max_area, self.get_max(heights))
+                    heights[i] = 0
+            area = max(area, self.largets_rectangle_area(heights))
 
-        return max_area
+        return area
