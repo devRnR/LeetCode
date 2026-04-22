@@ -1,25 +1,22 @@
-from collections import defaultdict
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
 
-        memo = defaultdict(float)
+        memo:dict[int, int] = {}
+        INF = float('INF')
 
         def dp_down(n):
 
-            if n in memo: return memo[n]
             if n == 0: return 0
-            if n < 0: return -1
+            if n in memo: return memo[n]
 
-            res = float('INF')
+            res = +INF
 
             for c in coins:
-                s = dp(n - c)
-                if s == -1: continue
-                res = min(res, s + 1)
-
-            memo[n] = res if res != float('INF') else -1
+                if n - c < 0: continue
+                res = min(res, dp_down(n - c) + 1)
             
-            return memo[n]
+            memo[n] = res
+            return res
 
         
         def dp_up(n):
@@ -34,7 +31,6 @@ class Solution:
             
             return dp[amount] if dp[amount] != amount + 1 else -1
 
-
-        
-        return dp_up(amount)
+        ans = dp_down(amount)
+        return -1 if ans == INF else ans
         
