@@ -92,10 +92,12 @@
 ## Math
 |  |
 | ------- |
+| [0070-climbing-stairs](https://github.com/devRnR/coding-test/tree/master/0070-climbing-stairs) |
 | [0509-fibonacci-number](https://github.com/devRnR/coding-test/tree/master/0509-fibonacci-number) |
 ## Dynamic Programming
 |  |
 | ------- |
+| [0070-climbing-stairs](https://github.com/devRnR/coding-test/tree/master/0070-climbing-stairs) |
 | [0085-maximal-rectangle](https://github.com/devRnR/coding-test/tree/master/0085-maximal-rectangle) |
 | [0322-coin-change](https://github.com/devRnR/coding-test/tree/master/0322-coin-change) |
 | [0509-fibonacci-number](https://github.com/devRnR/coding-test/tree/master/0509-fibonacci-number) |
@@ -107,6 +109,7 @@
 ## Memoization
 |  |
 | ------- |
+| [0070-climbing-stairs](https://github.com/devRnR/coding-test/tree/master/0070-climbing-stairs) |
 | [0509-fibonacci-number](https://github.com/devRnR/coding-test/tree/master/0509-fibonacci-number) |
 ## Array
 |  |
