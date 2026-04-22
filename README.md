@@ -87,13 +87,7 @@
 | [0107-binary-tree-level-order-traversal-ii](https://github.com/devRnR/coding-test/tree/master/0107-binary-tree-level-order-traversal-ii) |
 | [0429-n-ary-tree-level-order-traversal](https://github.com/devRnR/coding-test/tree/master/0429-n-ary-tree-level-order-traversal) |
 | [0993-cousins-in-binary-tree](https://github.com/devRnR/coding-test/tree/master/0993-cousins-in-binary-tree) |
-## Breadth-First Search
-|  |
-| ------- |
-| [0102-binary-tree-level-order-traversal](https://github.com/devRnR/coding-test/tree/master/0102-binary-tree-level-order-traversal) |
-| [0107-binary-tree-level-order-traversal-ii](https://github.com/devRnR/coding-test/tree/master/0107-binary-tree-level-order-traversal-ii) |
-| [0429-n-ary-tree-level-order-traversal](https://github.com/devRnR/coding-test/tree/master/0429-n-ary-tree-level-order-traversal) |
-| [0993-cousins-in-binary-tree](https://github.com/devRnR/coding-test/tree/master/0993-cousins-in-binary-tree) |
+
 ## Binary Tree
 |  |
 | ------- |
@@ -114,6 +108,7 @@
 |  |
 | ------- |
 | [0085-maximal-rectangle](https://github.com/devRnR/coding-test/tree/master/0085-maximal-rectangle) |
+| [0322-coin-change](https://github.com/devRnR/coding-test/tree/master/0322-coin-change) |
 | [0509-fibonacci-number](https://github.com/devRnR/coding-test/tree/master/0509-fibonacci-number) |
 ## Recursion
 |  |
@@ -123,4 +118,25 @@
 |  |
 | ------- |
 | [0509-fibonacci-number](https://github.com/devRnR/coding-test/tree/master/0509-fibonacci-number) |
+## Array
+|  |
+| ------- |
+| [0001-two-sum](https://github.com/devRnR/coding-test/tree/master/0001-two-sum) |
+| [0084-largest-rectangle-in-histogram](https://github.com/devRnR/coding-test/tree/master/0084-largest-rectangle-in-histogram) |
+| [0085-maximal-rectangle](https://github.com/devRnR/coding-test/tree/master/0085-maximal-rectangle) |
+| [0217-contains-duplicate](https://github.com/devRnR/coding-test/tree/master/0217-contains-duplicate) |
+| [0238-product-of-array-except-self](https://github.com/devRnR/coding-test/tree/master/0238-product-of-array-except-self) |
+| [0322-coin-change](https://github.com/devRnR/coding-test/tree/master/0322-coin-change) |
+| [0496-next-greater-element-i](https://github.com/devRnR/coding-test/tree/master/0496-next-greater-element-i) |
+| [0503-next-greater-element-ii](https://github.com/devRnR/coding-test/tree/master/0503-next-greater-element-ii) |
+| [0622-design-circular-queue](https://github.com/devRnR/coding-test/tree/master/0622-design-circular-queue) |
+| [0739-daily-temperatures](https://github.com/devRnR/coding-test/tree/master/0739-daily-temperatures) |
+## Breadth-First Search
+|  |
+| ------- |
+| [0102-binary-tree-level-order-traversal](https://github.com/devRnR/coding-test/tree/master/0102-binary-tree-level-order-traversal) |
+| [0107-binary-tree-level-order-traversal-ii](https://github.com/devRnR/coding-test/tree/master/0107-binary-tree-level-order-traversal-ii) |
+| [0322-coin-change](https://github.com/devRnR/coding-test/tree/master/0322-coin-change) |
+| [0429-n-ary-tree-level-order-traversal](https://github.com/devRnR/coding-test/tree/master/0429-n-ary-tree-level-order-traversal) |
+| [0993-cousins-in-binary-tree](https://github.com/devRnR/coding-test/tree/master/0993-cousins-in-binary-tree) |
 <!---LeetCode Topics End-->
