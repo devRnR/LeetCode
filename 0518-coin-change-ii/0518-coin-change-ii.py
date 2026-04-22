@@ -10,5 +10,24 @@ class Solution:
                     memo[x] += memo[x-c]
             
             return memo[n]
+        
+        memo = {}
+        def dp_recur(n, i):
+            if n== 0:
+                return 1
+            if n < 0 or i == len(coins):
+                return 0
+            
 
-        return dp(amount)
+            key = (i, n)
+            if key in memo:
+                return memo[key]
+            
+            res = dp_recur(n, i+1)
+            res += dp_recur(n - coins[i], i)
+
+            memo[key] = res
+
+            return res
+
+        return dp_recur(amount, 0)
