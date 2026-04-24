@@ -9,7 +9,7 @@ class Solution:
         curr1 = l1
         curr2 = l2
         
-        over = False
+        carry = 0
     
         first = None
         curr = None
@@ -24,16 +24,10 @@ class Solution:
                 val2 = curr2.val
                 curr2 = curr2.next
 
-            sum_v = val1 + val2
-
-            if over:
-                sum_v += 1
-                over = False
+            sum_v = val1 + val2 + carry
 
             a = sum_v % 10
-            b = sum_v // 10
-
-            if b: over = True
+            carry = sum_v // 10
 
             node = ListNode(a, None)
 
@@ -44,7 +38,7 @@ class Solution:
                 curr.next = node
                 curr = node
 
-        if over:
+        if carry:
             curr.next = ListNode(1, None)
 
         return first
